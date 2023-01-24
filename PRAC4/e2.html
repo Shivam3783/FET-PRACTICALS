@@ -1,0 +1,21 @@
+<html>
+
+<body>
+    <p id="demo"></p>
+
+    <script>
+        let text;
+        let rnum = Math.ceil(Math.random() * 5);
+        let inum = prompt('Guess the number between 1 to 5 ');
+        if (inum == rnum) {
+            text = "Matched";
+        }
+        else {
+            text = "Unmatched.. the number was " + rnum;
+        }
+        document.getElementById("demo").innerHTML = text;
+
+    </script>
+</body>
+
+</html>
