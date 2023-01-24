@@ -1,0 +1,23 @@
+<html>
+    <body>
+      <p id="demo"></p>
+<script>
+  prompt("Welcome! ")
+  let text;
+  let name = prompt("Please enter your name: ");
+  let nation = prompt("Enter your nation: ");
+  let vaccine = prompt("How many vaccine you got?  ");
+
+  if(vaccine < 1){
+    text =  "You will not get access of portal ";
+  }
+  else {
+    text = "You will get access of portal";
+  }
+
+  document.getElementById("demo").innerHTML = "Name: " +   name + "     Nation:" + nation + "     No of Vaccine " + vaccine + text ;
+
+
+</script>
+<body>
+</html>

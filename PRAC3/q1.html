@@ -1,0 +1,85 @@
+<html>
+    <body>
+      <p id="demo"></p>
+<script>
+  prompt("Welcome! ")
+  let text;
+  let name = prompt("Please enter your name: ");
+  let age = prompt("Enter your age: ");
+
+  if(age < 18){
+    text =  "You are not eligible for vote ";
+  }
+  else {
+    text = "You are eligible for vote";
+  }
+  document.getElementById("demo").innerHTML = text;
+
+</script>
+<body>
+</html>
+
+
+<!-- <html>
+
+<head>
+  <title>PRAC 2</title>
+</head>
+
+<body>
+  <h1>JavaScript Form Validation</h1>
+  <form name="form" method="get" action="p14 q5.html" onsubmit="return validate()">
+    <table>
+      <tr>
+        <td><label>Name*:</label></td>
+        <td>
+          <input type="text" name="name" pattern="[a-zAZ]*" />
+        </td>
+      </tr>
+
+      <tr>
+        <td><label>Age *:</label></td>
+        <td>
+          <input type="number" name="age">
+        </td>
+        </td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td>
+          <input type="submit" name="submit" value="Submit">
+          <input type="reset" name="reset" value="Reset">
+        </td>
+      </tr>
+    </table>
+  </form>
+  <script>
+    function validate() {
+      let n = document.forms["form"]["name"].value;
+      let y = document.forms["form"]["age"].value;
+
+      if (n == "") {
+        alert("Name must be filled");
+        return false;
+      }
+
+      if (y == "") {
+        alert("Age must be filled");
+        return false;
+      }
+
+      if (y < 18) {
+        alert("You are not eligible for vote");
+        return false;
+      }
+      if (y >= 18) {
+        alert("You are eligible for vote");
+        return false;
+      }
+
+    }
+  </script>
+</body>
+
+</html> -->
