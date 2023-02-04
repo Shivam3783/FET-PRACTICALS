@@ -1,0 +1,29 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <h2>PRAC 5</h2>
+    <script>
+        const employee = {
+            data: [
+                { name: "Shivam", working_days: 25 },
+                { name: "Manav", working_days: 22 },
+                { name: "Tanmay", working_days: 21 },
+                { name: "Jatin", working_days: 26 },
+                { name: "Arya", working_days: 19 }
+            ]
+        };
+        for (let i in employee.data) {
+            salary = employee.data[i].working_days * 2000;
+            document.write("<br>");
+            document.write(employee.data[i].name + ", has worked for " +
+                employee.data[i].working_days + "hours, and the salary is  " + salary);
+        }
+    </script>
+
+</body>
+
+</html>

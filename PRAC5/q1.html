@@ -1,0 +1,70 @@
+<html>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        let usrnum = prompt("Please enter number: ");
+        let text;
+
+        function perfect(usrnum) {
+            let sm = 0;
+            for (let i = 1; i <= (usrnum / 2); i++) {
+                if (usrnum % i == 0) {
+                    sm += i;
+                }
+            }
+            if (usrnum == sm) {
+                return true;
+            }
+            return false;
+        }
+
+        let ans;
+        for (let i = usrnum; i < 3000; i++) {
+            if (perfect(i)) {
+                ans = i;
+                break;
+            }
+        }
+
+        document.getElementById("demo").innerHTML = "The perfect number greater than " + usrnum + " = " + ans;
+
+    </script>
+
+    <body>
+
+</html> 
+
+<!-- <html>
+
+<body>
+    <p id="demo"></p>
+    <script>
+
+        function getNextPerfectNumber(num) {
+            let nextPerfect = num + 1;
+            while (!isPerfect(nextPerfect)) {
+                nextPerfect++;
+            }
+            return nextPerfect;
+        }
+
+        function isPerfect(num) {
+            let divisorsSum = 0;
+            for (let i = 1; i <= num / 2; i++) {
+                if (num % i === 0) {
+                    divisorsSum += i;
+                }
+            }
+            return divisorsSum === num;
+        }
+
+        const userNum = Number(prompt('Enter a number:'));
+        const nextPerfect = getNextPerfectNumber(userNum);
+        document.getElementById("demo").innerHTML = "The perfect number greater than " + userNum + " is " + nextPerfect;
+
+    </script>
+
+<body>
+
+</html> -->
