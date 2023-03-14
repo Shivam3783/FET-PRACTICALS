@@ -1,0 +1,144 @@
+<html>
+<head>
+  <title>PRAC 10</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <style>
+   
+    input[type] {
+      padding: 10px;
+      font-size: 1.2em;
+    }
+
+    input[type='submit'] {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 1.5em;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+
+    function validate() {
+      var phoneNumber = document.getElementById('phone-number').value;
+      var phoneRGEX = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/;
+      var phoneResult = phoneRGEX.test(phoneNumber);
+
+      if (phoneResult == true) {
+        var name = document.getElementById('name').value;
+        var nameRGEX = /^[A-Za-z]+$/;
+        var nameResult = nameRGEX.test(name);
+
+        if (nameResult == true) {
+          var email = document.getElementById('email').value;
+          var emailRGEX = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+          var emailResult = emailRGEX.test(email);
+
+          if (emailResult == true) {
+            var passwd = document.getElementById('passwd').value;
+            var passwdRGEX = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+            var passwdResult = passwdRGEX.test(passwd);
+
+            if (passwdResult == true) {
+              var repasswd = document.getElementById('repasswd').value;;
+              if (repasswd != passwd) {
+                alert("Enter Password same as above");
+              }
+              else {
+                alert("Sign Up Completed Successfully! ");
+              }
+
+            }
+            if (passwdResult == false) {
+              alert("Enter a valid password:");
+            }
+          }
+          if (emailResult == false) {
+            alert("Enter a Valid Email");
+          }
+        }
+        if (nameResult == false) {
+          alert("Enter valid name: ");
+        }
+
+      }
+      if (phoneResult == false) {
+        alert("enter 10 Numbers");
+      }
+
+      return false;
+    }
+
+    var state = false;
+    function toggle() {
+      if (state) {
+        document.getElementById("passwd").setAttribute("type", "password");
+        document.getElementById("eye").style.color = '#7a797e';
+        state = false;
+      }
+      else {
+        document.getElementById("passwd").setAttribute("type", "text");
+        document.getElementById("eye").style.color = '#5887ef';
+        state = true;
+      }
+    }
+    function toggle1() {
+      if (state) {
+        document.getElementById("repasswd").setAttribute("type", "password");
+        document.getElementById("eye2").style.color = '#7a797e';
+        state = false;
+      }
+      else {
+        document.getElementById("repasswd").setAttribute("type", "text");
+        document.getElementById("eye2").style.color = '#5887ef';
+        state = true;
+      }
+    }
+    
+
+
+
+
+  </script>
+</head>
+
+<body>
+  <form onsubmit="validate()" class="alt-1">
+    <p>
+      <input type="number" id="phone-number" placeholder="Phone Number" />
+    </p>
+    <p>
+      <input type="text" id="name" placeholder="Name" />
+    </p>
+    <p>
+      <input type="email" id="email" placeholder="Email" />
+    </p>
+    <p>
+      <input type="password" id="passwd" placeholder="Password" />
+      <span>
+        <i class="fa fa-eye" id="eye" onclick="toggle()">
+        </i>
+    </span>
+    </p>
+    <p>
+      <input type="password" id="repasswd" placeholder="Re-enter Password" />
+      <span>
+        <i class="fa fa-eye" id="eye2" onclick="toggle1()">
+        </i>
+    </span>
+    </p>
+    <p>
+      <input type="submit" />
+    </p>
+
+
+
+  </form>
+</body>
+
+</html>
