@@ -1,0 +1,14 @@
+<h1>My To-Do List</h1>
+
+<input type="text" [(ngModel)]="newTaskDescription" placeholder="New Task">
+<button (click)="addTask()">Add</button>
+
+<ul>
+  <!-- <li *ngFor="let task of tasks" [ngClass]="{'done': task.done}"> -->
+    <!-- <li *ngFor="let task of tasks" [class.done]="task.done"> -->
+    <li *ngFor="let task of tasks" [style.text-decoration]="task.done ? 'line-through' : 'none'">
+    <input type="checkbox" [checked]="task.done" (change)="markTaskDone(task)">
+    <span>{{task.description}}</span>
+    <button (click)="deleteTask(task)">Delete</button>
+  </li>
+</ul>
