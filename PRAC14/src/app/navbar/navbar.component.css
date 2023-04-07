@@ -1,0 +1,21 @@
+
+
+.button-row {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .button {
+    margin: 50px 50px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  

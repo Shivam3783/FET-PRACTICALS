@@ -1,0 +1,65 @@
+div {
+    margin: 20px;
+    padding: 20px;
+    border: 3px solid green;
+    border-radius: 5px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+select {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    border: 3px solid green;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0069d9;
+}
+
+
+
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie {
+    width: 26%;
+    margin: 1rem;
+    border: 5px solid red;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.movie img {
+    width: 100%;
+    height: auto;
+}
+
+.movie-details {
+    padding: 0.5rem;
+    text-align: center;
+}
