@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Portfolio</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>    
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <main class='main'>
+      <nav class='navBar'>
+        <h1>Shivam Patel Portfolio </h1>
+        <div class='navigationMenu'>
+          <a href="#aboutMe">About Me</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contactForm">Let's Connect!</a>
+        <div>
+      </nav>
+      <section class='heroSection'>
+        <img 
+        class='profileImage'
+        src='photo_2023-01-05 11.26.18.jpeg'/>
+        <div class='herosectionDetails'>
+          <h1>Shivam Patel</h1>
+          <h3>Student of Ganpat University</h3>
+        </div>
+      </section>
+      <section class='aboutMe' id='aboutMe'>
+        <h1>What I Do...</h1>
+        <p>Computers and their immense diversity have interested me thoroughly. In particular: artificial intelligence, web languages and building computers. These have stretched my knowledge of computers and I always strive to expand my knowledge of these topics further...
+        </p>
+      </section>
+      <section class='skillsAndProjects'>
+        <div class='skills' id='skills'>
+          <h1 class='cardHeading'>Skills</h1>
+          <img title='c++' src='c++.png'>
+          <img title='c' src='c.png'>
+          <img title='html' src='html.png'>
+          <img title='css' src='css.png'>
+          <img title='js' src='js.png'>
+          <img title='java' src='java.png'>
+          <img title='json' src='json.png'>
+          <img title='python' src='python.png'>
+        </div>
+        <div class='projects' id='projects'>
+          <h1 class='cardHeading'>Projects</h1>
+          <div class='projectContainer'>
+            <img src='java.png'/>
+            <div class='projectDescription'>
+              <h4>Employee Seating Assessment</h4>
+              <a href="https://github.com/Shivam3783/Employee-Seating-Assessment-Project-Sem3">https://github.com/Shivam3783/Employee-Seating-Assessment-Project-Sem3</a>
+            </div>
+          </div>
+          <div class='projectContainer'>
+            <img src='c++.png'/>
+            <div class='projectDescription'>
+              <h4>Super Market Billing System</h4>
+              <a href="https://github.com/Shivam3783/ESFP-PROJECT-2">https://github.com/Shivam3783/ESFP-PROJECT-2</a>
+            </div>
+          </div>
+          <div class='projectContainer'>
+            <img src='css.png'/>
+            <div class='projectDescription'>
+              <h4>Photo Gallery</h4>
+              <a href="https://ipproject1shivampatel.000webhostapp.com/">https://ipproject1shivampatel.000webhostapp.com/</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class='contactForm' id='contactForm'>
+        <h1>Let's Connect!</h2>
+        <div class='formGroup'>
+          <label for='name'>Enter Full Name</label><br/>
+          <input type='text' id='name' placeholder='Full Name'/>
+        </div>
+        <div class='formGroup'>
+          <label for='email'>Email</label><br/>
+          <input type='text' id='email' placeholder='Email'/>
+        </div>
+        <div class='formGroup'>
+          <label for='message'>Message</label><br/>
+          <textarea placeholder="Send some message!" id="message" name="w3review" rows="4" cols="50"></textarea>
+        </div>
+        <button class='submitButton' onClick={submit()}>Connect</button>
+      </section>
+      <a class="ion-icon" href="https://www.instagram.com/shivamm.019/">
+        <ion-icon name="logo-instagram"></ion-icon></a>
+      <a class="ion-icon" href="https://twitter.com/shivammp019">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </a>
+    </main>  
+
+  </body>
+</html>
+
